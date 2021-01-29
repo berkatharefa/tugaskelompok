@@ -1,0 +1,175 @@
+// Base styles for a Bespoke presentation
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*, ::before, ::after
+  box-sizing inherit
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+
+html
+  box-sizing border-box
+
+p, li
+  line-height 1.6
+
+p
+  margin 0 0 1rem 0
+
+ul, ol
+  padding 0 0 0 20px
+
+figure
+  margin 0
+
+img, video
+  vertical-align middle
+
+.deck
+  overflow hidden
+  font-feature-settings "kern" 1
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  // NOTE hide deck and slide content until Bespoke.js classes have been added
+  &:not(.bespoke-parent), section:not(.bespoke-slide)
+    display none
+
+.bespoke-parent, .bespoke-scale-parent
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+.bespoke-scale-parent, .bespoke-slide
+  pointer-events none
+
+.bespoke-slide
+  overflow hidden
+  // NOTE force opacity to start at 0 to avoid transition on load when using bespoke-scale
+  opacity 0
+  background-color #fff
+  position absolute
+  width 100%
+  height 100vh
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  transition opacity 200ms ease-in-out 150ms
+
+.bespoke-active
+  pointer-events auto
+  opacity 1
+  // NOTE Webkit requires z-index to be 1 for elements to receive focus (may no longer apply)
+  z-index 1
+
+.bespoke-inactive
+  transition-delay 0
+
+.bespoke-bullet
+  transition opacity 200ms ease-in-out
+  &-inactive
+    visibility hidden
+
+.emphatic
+  background-color #222
+
+.emphatic-text
+  color #fff
+
+aside[role=note], aside[role=notes]
+  display none
+
+.mainColor
+  background-color: #45AFDC;
+
+.dannyTrejoBackground
+  background-image: url('../images/danny-trejo-background.jpg');
+  background-size: cover;
+
+.kehilanganUangBackground
+  background-image: url('../images/kehilangan_uang.jpg');
+  background-size: cover;
+
+.dilanMileaBackground
+  background-image: url('../images/dilan-milea.jpg');
+  background-size: cover;
+
+.bossmanBackground
+  background-image: url('../images/bossmarah.jpg');
+  background-size: cover;
+
+
+.myDannyBox
+  width: 500px;
+  height: 300px;
+  margin-right: 500px;
+  font-size: 35.7px;
+  color: #fff;
+
+.mainColor h1
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 43.5px;
+  width: 100%;
+
+.mainColor p
+  color: #fff;
+  text-align: left;
+  font-size: 18px;
+  width: 50%;
+
+.judul
+  width: 55%;
+  text-align: left;
+
+.secondaryColor
+  background-color: #ED9E46;
+
+.garis
+  margin: 0;
+
+.highlight
+  color: #FFC800;
+
+.hrStyle  
+  width:50%;
+  text-align:center;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #FFF;
+
+.highlight2
+  color: red;
+
+.logo-box
+  margin-top: 100px
+  left: 0;
+  width: 50%;
+
+.logo-box a
+  margin-left: 10px;
+
+.githubLink
+  color: #fff;
+  text-decoration: none; 
+
+.textCenter
+  text-align: center;  
+
+.fontBig
+  font-size: 30px;
+  color: #fff;
+
+.imagesBox
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+  text-styles: bold;
+  color: #fff;
+
